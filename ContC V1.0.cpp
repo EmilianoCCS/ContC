@@ -59,19 +59,7 @@ int main (void)
 	system ("cls");
 	system ("Color 3");
 	printf("\n\n");
-	/*
-	printf("\t  ***************************************************************************\n");
-	printf("\t  *                                                                         *\n");
-	printf("\t  *        __     ___           _______        ___         _____   _____    *\n");
-	printf("\t  *      /       /   \\  |\\    |    |          /                 | |         *\n");
-	printf("\t  *     |       |     | | \\   |    |         |                  | |         *\n");
-	printf("\t  *     |       |     | |  \\  |    |         |                  | |         *\n");
-	printf("\t  *     |       |     | |   \\ |    |    __   |                  | |         *\n");
-	printf("\t  *      \\___    \\___/  |    \\|    |   |__|   \\___         _____| |_____    *\n");
-	printf("\t  *                                                                         *\n");
-	printf("\t  *                                                                         *\n");
-	printf("\t  **************************************************************************");
-	*/
+
     printf("\n");
 	printf(" \t\t\t\t\tContCContC    ContCContC\n");
 	printf(" \t\t\t\t\tContCContC    ContCContC\n");
