@@ -79,7 +79,8 @@ int main (void)
 	printf(" 2- Logica proposicional\n");
 	printf(" 3- Matrizes\n");
 	printf(" 4- Analise combinatoria\n");
-	printf(" 5- Sair\n\n");
+	printf(" 5- Proximo menu\n");
+	printf(" 6- Sair\n\n");
 	printf(" Escolha uma opcao: ");
 	menu = getch() - 48;
 	//scanf("%d", &menu);
@@ -787,9 +788,60 @@ int main (void)
 
 
 	break;
-
-
+	
 	case 5:
+		system ("cls");
+		printf("\n\n");
+		printf("\n");
+		printf(" \t\t\t\t\tContCContC    ContCContC\n");
+		printf(" \t\t\t\t\tContCContC    ContCContC\n");
+		printf(" \t\t\t\t\tContCContC    ContCContC\n");
+		printf(" \t\t\t\t\t     ContC    ContC\n");
+		printf(" \t\t\t\t\t     ContC    ContC\n");
+		printf(" \t\t\t\t\t     ContC    ContC\n");
+		printf(" \t\t\t\t\t     ContC    ContC\n");
+		printf(" \t\t\t\t\t     ContC    ContC\n");
+		printf(" \t\t\t\t\tContCContC    ContCContC\n");
+		printf(" \t\t\t\t\tContCContC    ContCContC\n");
+		printf(" \t\t\t\t\tContCContC    ContCContC\n");
+		printf("\n");
+		printf("\n\n____________________________________________________________________________________________________\n\n\n");
+		printf("\t\t\t\t      M E N U    P R I N C I P A L \n\n\n");
+		printf(" 1- f(x) = k\n");
+		printf(" 2- f(x) = x^k\n");
+		printf(" 3- f(x) = k^x\n");
+		printf(" 4- f(x) = ln(x)\n");
+		printf(" 5- f(x) = 1/x\n");
+		printf(" 6- f(x) = sen(x)\n");
+		printf(" 7- f(x) = cos(x)\n");
+		printf(" 8- f(x) = tg(x)\n");
+		printf(" 9- Menu anterior\n");
+		printf("10- Sair");
+		printf("\n\n Escolha uma opcao: ");
+		menu = getch() - 48;
+		//scanf("%d", &menu);
+		printf("\n");
+		switch (menu)
+		{
+			case 1:
+				printf("");
+				
+				printf("Voce escolheu uma função que necessita de elementos para a sua construção \n");
+				printf("INSIRA O VALOR DE K DESEJADO: ");
+			break;
+			
+			case 2:
+				
+			break;
+			
+			default:
+			break;
+			
+		}
+		
+	break;
+
+	case 6:
 
 		MessageBox (NULL, " Esperamos te ver novamente em breve!" , "Muito obrigado!", MB_OK);
 		keybd_event ( VK_CONTROL, 0x11, 0, 0 );
