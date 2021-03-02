@@ -790,6 +790,7 @@ int main (void)
 	break;
 	
 	case 5:
+		menuprincipal2: 
 		system ("cls");
 		printf("\n\n");
 		printf("\n");
@@ -816,7 +817,6 @@ int main (void)
 		printf(" 7- f(x) = cos(x)\n");
 		printf(" 8- f(x) = tg(x)\n");
 		printf(" 9- Menu anterior\n");
-		printf("10- Sair");
 		printf("\n\n Escolha uma opcao: ");
 		menu = getch() - 48;
 		//scanf("%d", &menu);
@@ -824,17 +824,22 @@ int main (void)
 		switch (menu)
 		{
 			case 1:
-				printf("");
-				
+				printf("\n\n");
 				printf("Voce escolheu uma função que necessita de elementos para a sua construção \n");
 				printf("INSIRA O VALOR DE K DESEJADO: ");
+				
 			break;
 			
 			case 2:
 				
 			break;
 			
+			case 9:
+				goto menuprincipal;
+			break;
+			
 			default:
+				goto menuprincipal2;
 			break;
 			
 		}
