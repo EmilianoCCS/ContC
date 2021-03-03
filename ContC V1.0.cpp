@@ -51,6 +51,12 @@ int main (void)
 
 	int formulak, formulan;
 
+/*---------------------------------------------------------------------- PARTE 2 ContC ---------------------------------------------------------------------*/
+	
+	float k, x;
+
+
+
 
 	//inicio programa
 
@@ -824,16 +830,41 @@ int main (void)
 		switch (menu)
 		{
 			case 1:
-				printf("\n\n");
-				printf("Voce escolheu uma função que necessita de elementos para a sua construção \n");
-				printf("INSIRA O VALOR DE K DESEJADO: ");
-				
+					menu1submenu1:
+					system ("cls");
+				    printf("\n     ");
+				    printf("");
+				    printf("\n\t\t F(X) = K ");
+				    printf("\n\n\n");
+				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				  	printf("\n\n Escolha uma opcao: ");
+					submenu = getch() - 48;
+					//scanf("%d", &submenu);
+					switch (submenu)
+					{
+						case 1:
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tPara a funcao desejada e necessario entrar com o valor de K: ");
+							scanf ("%f", &k);
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							printf("\n\n\t\t f(%.2f) = %.2f", x, k);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu1submenu1;
+							
+						break;
+					}
 			break;
 			
 			case 2:
 				
 			break;
 			
+			case 3:
+				
+			break; 
 			case 9:
 				goto menuprincipal;
 			break;
