@@ -85,7 +85,7 @@ int main (void)
 	printf(" 2- Logica proposicional\n");
 	printf(" 3- Matrizes\n");
 	printf(" 4- Analise combinatoria\n");
-	printf(" 5- Proximo menu\n");
+	printf(" 5- Proximo\n");
 	printf(" 6- Sair\n\n");
 	printf(" Escolha uma opcao: ");
 	menu = getch() - 48;
