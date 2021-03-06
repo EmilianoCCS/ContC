@@ -955,6 +955,22 @@ int main (void)
 					}
 			break; 
 			
+			case 4:
+					system ("cls");
+				    printf("\n     ");
+				    printf("");
+				    printf("\n\t\t F(X) = K ");
+				    printf("\n\n\n");
+				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 4- Voltar ao menu anterior");
+				  	printf("\n\n Escolha uma opcao: ");
+					submenu = getch() - 48;
+					//scanf("%d", &submenu);
+					switch (submenu)
+					{
+						
+					}
+			break;
 			
 			case 9:
 				goto menuprincipal;
