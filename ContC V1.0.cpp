@@ -856,6 +856,24 @@ int main (void)
 							goto menu1submenu1;
 							
 						break;
+						
+						case 2:
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tPara a funcao desejada e necessario entrar com o valor de K: ");
+							scanf ("%f", &k);
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							printf("\n\n\t\t f(%.2f) = %.2f", x, k);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu1submenu1;
+							
+						break;
+						
+						case 3:
+						break;
+						
 					}
 			break;
 			
