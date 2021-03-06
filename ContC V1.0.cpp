@@ -837,7 +837,7 @@ int main (void)
 				    printf("\n\t\t F(X) = K ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
-				    printf(" 2- Calcular a funcao: ");
+				    printf(" 2- Calcular a aplicação de um valor na derivada f '(x). ");
 				  	printf("\n\n Escolha uma opcao: ");
 					submenu = getch() - 48;
 					//scanf("%d", &submenu);
