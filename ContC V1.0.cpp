@@ -54,6 +54,7 @@ int main (void)
 /*---------------------------------------------------------------------- PARTE 2 ContC ---------------------------------------------------------------------*/
 	
 	float k, x;
+	double resufx;
 
 
 
@@ -829,7 +830,8 @@ int main (void)
 		printf("\n");
 		switch (menu)
 		{
-			case 1:
+			/* ------------------------------------------- Inicio da 1 opção -----------------------------------------------------------*/
+			case 1: 
 					menu1submenu1:
 					system ("cls");
 				    printf("\n     ");
@@ -837,7 +839,7 @@ int main (void)
 				    printf("\n\t\t F(X) = K ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
-				    printf(" 2- Calcular a aplicação de um valor na derivada f '(x). ");
+				    printf(" 4- Voltar ao menu anterior");
 				  	printf("\n\n Escolha uma opcao: ");
 					submenu = getch() - 48;
 					//scanf("%d", &submenu);
@@ -854,36 +856,106 @@ int main (void)
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu1submenu1;
-							
 						break;
 						
-						case 2:
+						
+						case 4:
+							goto menuprincipal2;
+						break;
+						
+						default:
+							goto menu1submenu1;
+						break;
+						
+					}
+				
+			break;
+			
+			/* ---------------------------------------------- Inicio da 2 opção ---------------------------------------------------------*/
+			
+			case 2:
+					menu2submenu1:
+					system ("cls");
+				    printf("\n     ");
+				    printf("");
+				    printf("\n\t\t F(X) = K ");
+				    printf("\n\n\n");
+				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 4- Voltar ao menu anterior");
+				  	printf("\n\n Escolha uma opcao: ");
+					submenu = getch() - 48;
+					//scanf("%d", &submenu);
+					switch (submenu)
+					{
+						case 1:
+							
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tPara a funcao desejada e necessario entrar com o valor de K: ");
 							scanf ("%f", &k);
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
-							printf("\n\n\t\t f(%.2f) = %.2f", x, k);
+							resufx = pow(k,x);
+							printf("\n\n\t\t f(%.2f) = %.2lf", x, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
-							goto menu1submenu1;
+							goto menu2submenu1;
 							
+						break; 
+						
+						case 4:
+							goto menuprincipal2;
 						break;
 						
-						case 3:
+						default:
+							goto menu2submenu1;
 						break;
 						
 					}
 			break;
-			
-			case 2:
 				
-			break;
-			
+				/* ---------------------------------------------- Inicio da 3 opção ---------------------------------------------------------*/
+							
 			case 3:
-				
+					menu3submenu1:
+					system ("cls");
+				    printf("\n     ");
+				    printf("");
+				    printf("\n\t\t F(X) = K ");
+				    printf("\n\n\n");
+				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 4- Voltar ao menu anterior");
+				  	printf("\n\n Escolha uma opcao: ");
+					submenu = getch() - 48;
+					//scanf("%d", &submenu);
+					switch (submenu)
+					{
+						case 1:
+							
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tPara a funcao desejada e necessario entrar com o valor de K: ");
+							scanf ("%f", &k);
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = pow(x,k);
+							printf("\n\n\t\t f(%.2f) = %.2lf", x, resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu3submenu1;
+						break; 
+						
+						case 4:
+							goto menuprincipal2;
+						break;
+						
+						default:
+							goto menu3submenu1;
+						break;
+					}
 			break; 
+			
+			
 			case 9:
 				goto menuprincipal;
 			break;
