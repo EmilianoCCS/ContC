@@ -878,7 +878,7 @@ int main (void)
 					system ("cls");
 				    printf("\n     ");
 				    printf("");
-				    printf("\n\t\t F(X) = K ");
+				    printf("\n\t\t F(X) = X^K ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
 				    printf(" 4- Voltar ao menu anterior");
@@ -921,7 +921,7 @@ int main (void)
 					system ("cls");
 				    printf("\n     ");
 				    printf("");
-				    printf("\n\t\t F(X) = K ");
+				    printf("\n\t\t F(X) = K^X ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
 				    printf(" 4- Voltar ao menu anterior");
@@ -955,11 +955,15 @@ int main (void)
 					}
 			break; 
 			
+			/* ---------------------------------------------- Inicio da 4 opção ---------------------------------------------------------*/
+			
+			
 			case 4:
+					menu4submenu1: 
 					system ("cls");
 				    printf("\n     ");
 				    printf("");
-				    printf("\n\t\t F(X) = K ");
+				    printf("\n\t\t f(x) = ln(x) ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
 				    printf(" 4- Voltar ao menu anterior");
@@ -968,10 +972,217 @@ int main (void)
 					//scanf("%d", &submenu);
 					switch (submenu)
 					{
+						case 1:
 						
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = log (x);
+							printf("\n\n\t\t f(%.2f) = %.6lf", x, resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu4submenu1;
+							
+						break; 
+						
+						case 4:
+							goto menuprincipal2;
+						break;
+						
+						default:
+							goto menu4submenu1;
+						break;
 					}
 			break;
 			
+			
+			/* ---------------------------------------------- Inicio da 5 opção ---------------------------------------------------------*/
+						
+			case 5:
+					menu5submenu1: 
+					system ("cls");
+				    printf("\n     ");
+				    printf("");
+				    printf("\n\t\t f(x) = ln(x) ");
+				    printf("\n\n\n");
+				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 4- Voltar ao menu anterior");
+				  	printf("\n\n Escolha uma opcao: ");
+					submenu = getch() - 48;
+					//scanf("%d", &submenu);
+					switch (submenu)
+					{
+						case 1:
+						
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = 1/x;
+							printf("\n\n\t\t f(%.6f)", resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu5submenu1;
+							
+						break; 
+						
+						case 4:
+							
+							goto menuprincipal2;
+							
+						break;
+						
+						default:
+							
+							goto menu5submenu1;
+							
+						break;
+			
+						break;
+					}	
+			
+			/* ---------------------------------------------- Inicio da 6 opção ---------------------------------------------------------*/
+			
+			case 6:
+				
+				menu6submenu1: 
+					system ("cls");
+				    printf("\n     ");
+				    printf("");
+				    printf("\n\t\t f(x) = ln(x) ");
+				    printf("\n\n\n");
+				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 4- Voltar ao menu anterior");
+				  	printf("\n\n Escolha uma opcao: ");
+					submenu = getch() - 48;
+					//scanf("%d", &submenu);
+					switch (submenu)
+					{
+						case 1:
+						
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = sin (x);
+							printf("\n\n\t\t f(%.6f)", resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu6submenu1;
+							
+						break; 
+						
+						case 4:
+							
+							goto menuprincipal2;
+							
+						break;
+						
+						default:
+							
+							goto menu6submenu1;
+							
+						break;
+			
+						break;
+					}
+			break;
+				
+			/* ---------------------------------------------- Inicio da 7 opção ---------------------------------------------------------*/
+				
+			case 7:
+				
+					menu7submenu1: 
+					system ("cls");
+				    printf("\n     ");
+				    printf("");
+				    printf("\n\t\t f(x) = ln(x) ");
+				    printf("\n\n\n");
+				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 4- Voltar ao menu anterior");
+				  	printf("\n\n Escolha uma opcao: ");
+					submenu = getch() - 48;
+					//scanf("%d", &submenu);
+					switch (submenu)
+					{
+						case 1:
+						
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = cos (x);
+							printf("\n\n\t\t f(%.6f)", resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu7submenu1;
+							
+						break; 
+						
+						case 4:
+							
+							goto menuprincipal2;
+							
+						break;
+						
+						default:
+							
+							goto menu7submenu1;
+							
+						break;
+			
+						break;
+					}
+			break;	
+			
+			/* ---------------------------------------------- Inicio da 8 opção ---------------------------------------------------------*/
+				
+			case 8:
+				
+					menu8submenu1: 
+					system ("cls");
+				    printf("\n     ");
+				    printf("");
+				    printf("\n\t\t f(x) = ln(x) ");
+				    printf("\n\n\n");
+				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 4- Voltar ao menu anterior");
+				  	printf("\n\n Escolha uma opcao: ");
+					submenu = getch() - 48;
+					//scanf("%d", &submenu);
+					switch (submenu)
+					{
+						case 1:
+						
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = tan (x);
+							printf("\n\n\t\t f(%.6f)", resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu7submenu1;
+							
+						break; 
+						
+						case 4:
+							
+							goto menuprincipal2;
+							
+						break;
+						
+						default:
+							
+							goto menu7submenu1;
+							
+						break;
+			
+						break;
+					}
+			break;	
+				
 			case 9:
 				goto menuprincipal;
 			break;
@@ -981,6 +1192,8 @@ int main (void)
 			break;
 			
 		}
+		
+		
 		
 	break;
 
