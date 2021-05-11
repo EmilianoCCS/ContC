@@ -995,8 +995,8 @@ int main (void)
 							{
 								kaux = kaux * (-1);
 							}
-							resufx = pow(k,x) * log(kaux);
-							printf("\n\n\t\t f(%.2f) = %.4lf", x, resufx);
+							resufx = pow(k,x) * (log(kaux));
+							printf("\n\n\t\t f(%.2f) = %.6lf", x, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu3submenu1;
