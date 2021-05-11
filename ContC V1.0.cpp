@@ -1024,6 +1024,7 @@ int main (void)
 				    printf("\n\t\t f(x) = ln(x) ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 2- Calcular a aplicacao de um valor na derivada f'(x)\n");
 				    printf(" 4- Voltar ao menu anterior");
 				  	printf("\n\n Escolha uma opcao: ");
 					submenu = getch() - 48;
@@ -1043,6 +1044,20 @@ int main (void)
 							goto menu4submenu1;
 							
 						break; 
+						
+						case 2:
+							
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = 1/x;
+							printf("\n\n\t\t f(%.2f) = %.6lf", x, resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu4submenu1;
+							
+						break;
 						
 						case 4:
 							goto menuprincipal2;
@@ -1065,6 +1080,7 @@ int main (void)
 				    printf("\n\t\t f(x) = ln(x) ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 2- Calcular a aplicacao de um valor na derivada f'(x)\n");
 				    printf(" 4- Voltar ao menu anterior");
 				  	printf("\n\n Escolha uma opcao: ");
 					submenu = getch() - 48;
@@ -1084,6 +1100,20 @@ int main (void)
 							goto menu5submenu1;
 							
 						break; 
+						
+						case 2:
+							
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = 1/x;
+							printf("\n\n\t\t f(%.6f)", resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu5submenu1;
+							
+						break;
 						
 						case 4:
 							
@@ -1108,9 +1138,10 @@ int main (void)
 					system ("cls");
 				    printf("\n     ");
 				    printf("");
-				    printf("\n\t\t f(x) = ln(x) ");
+				    printf("\n\t\t f(x) = sen(x) ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 2- Calcular a aplicacao de um valor na derivada f'(x)\n");
 				    printf(" 4- Voltar ao menu anterior");
 				  	printf("\n\n Escolha uma opcao: ");
 					submenu = getch() - 48;
@@ -1130,6 +1161,20 @@ int main (void)
 							goto menu6submenu1;
 							
 						break; 
+						
+						case 2:
+							
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = cos (x);
+							printf("\n\n\t\t f(%.6f)", resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu6submenu1;
+							
+						break;
 						
 						case 4:
 							
@@ -1155,9 +1200,10 @@ int main (void)
 					system ("cls");
 				    printf("\n     ");
 				    printf("");
-				    printf("\n\t\t f(x) = ln(x) ");
+				    printf("\n\t\t f(x) = cos(x) ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 2- Calcular a aplicacao de um valor na derivada f'(x)\n");
 				    printf(" 4- Voltar ao menu anterior");
 				  	printf("\n\n Escolha uma opcao: ");
 					submenu = getch() - 48;
@@ -1177,6 +1223,21 @@ int main (void)
 							goto menu7submenu1;
 							
 						break; 
+						
+						case 2:
+						
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = - sin(x);
+							printf("\n\n\t\t f(%.6f)", resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu7submenu1;
+							
+						break; 
+						
 						
 						case 4:
 							
@@ -1202,9 +1263,10 @@ int main (void)
 					system ("cls");
 				    printf("\n     ");
 				    printf("");
-				    printf("\n\t\t f(x) = ln(x) ");
+				    printf("\n\t\t f(x) = tg(x) ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 2- Calcular a aplicacao de um valor na derivada f'(x)\n");
 				    printf(" 4- Voltar ao menu anterior");
 				  	printf("\n\n Escolha uma opcao: ");
 					submenu = getch() - 48;
@@ -1224,6 +1286,20 @@ int main (void)
 							goto menu7submenu1;
 							
 						break; 
+						
+						case 2:	
+						
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							resufx = (pow(1/cos(x),2));
+							printf("\n\n\t\t f(%.6f)", resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu7submenu1;					
+						break;
+						
 						
 						case 4:
 							
