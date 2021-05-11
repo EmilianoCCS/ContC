@@ -53,8 +53,9 @@ int main (void)
 
 /*---------------------------------------------------------------------- PARTE 2 ContC ---------------------------------------------------------------------*/
 	
-	float k, x;
-	double resufx;
+	float k, x, kaux, xaux;
+	double resufx, resufxaux;
+	
 
 
 
@@ -829,6 +830,10 @@ int main (void)
 		//scanf("%d", &menu);
 		printf("\n");
 		switch (menu)
+						/*
+							Variaveis utilizando: double resufx, resufxaux;
+							float k, x, kaux, xaux;
+						*/
 		{
 			/* ------------------------------------------- Inicio da 1 opção -----------------------------------------------------------*/
 			case 1: 
@@ -916,6 +921,7 @@ int main (void)
 							
 						break; 
 						
+						
 						case 2:
 							
 							system ("cls");
@@ -924,8 +930,8 @@ int main (void)
 							scanf ("%f", &k);
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
-							resufx = pow(k,x);
-							printf("\n\n\t\t f'(%.2f) = %.2lf", k, resufx);
+							resufx = k * (pow(x,(k-1)));
+							printf("\n\n\t\t f'(%.2f) = %.2lf", x, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu2submenu1;
@@ -953,6 +959,7 @@ int main (void)
 				    printf("\n\t\t F(X) = K^X ");
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
+				    printf(" 2- Calcular a aplicacao de um valor na derivada f'(x)\n");
 				    printf(" 4- Voltar ao menu anterior");
 				  	printf("\n\n Escolha uma opcao: ");
 					submenu = getch() - 48;
@@ -972,7 +979,29 @@ int main (void)
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu3submenu1;
+							
 						break; 
+						
+						case 2:
+						
+							system ("cls");
+							printf ("\n\n\n\n");
+							printf ("\tPara a funcao desejada e necessario entrar com o valor de K: ");
+							scanf ("%f", &k);
+							printf ("\tEntre agora com o valor de X: ");
+							scanf ("%f", &x);
+							kaux = k;
+							if (kaux < 0) 
+							{
+								kaux = kaux * (-1);
+							}
+							resufx = pow(k,x) * log(kaux);
+							printf("\n\n\t\t f(%.2f) = %.4lf", x, resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu3submenu1;
+							
+						break;
 						
 						case 4:
 							goto menuprincipal2;
