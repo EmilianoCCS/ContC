@@ -1053,11 +1053,7 @@ int main (void)
 							
 						break;
 						
-							/*
-							Variaveis utilizando: 
-							float k, x, kaux, xaux, xa, xb;
-							double resufx, resufxaux;
-							*/
+							
 						case 3:
 							
 							system ("cls");
@@ -1098,6 +1094,7 @@ int main (void)
 				    printf("\n\n\n");
 				    printf("\n 1- Calcular a aplicacao de um valor na funcao f(x)\n");
 				    printf(" 2- Calcular a aplicacao de um valor na derivada f'(x)\n");
+				    printf(" 3- Calcular a integral definida da funcao f(x) no intervalo a <= x <= b\n");
 				    printf(" 4- Voltar ao menu anterior");
 				  	printf("\n\n Escolha uma opcao: ");
 					submenu = getch() - 48;
@@ -1126,6 +1123,30 @@ int main (void)
 							scanf ("%f", &x);
 							resufx = 1/x;
 							printf("\n\n\t\t f(%.2f) = %.6lf", x, resufx);
+							printf ("\n\n\n\n\n\n\n\n\n");
+							system ("pause");
+							goto menu4submenu1;
+							
+						break;
+						
+							/*
+							Variaveis utilizando: 
+							float k, x, kaux, xaux, xa, xb;
+							double resufx, resufxaux;
+							*/
+							
+						case 3:
+							
+							system ("cls");
+							printf ("\n\n\n\n");
+							//printf ("\tPara a funcao desejada e necessario entrar com o valor de K: ");
+							///scanf ("%f", &k);
+							printf ("\tEntre agora com o valor de a: ");
+							scanf ("%f", &xa);
+							printf ("\tEntre agora com o valor de b: ");
+							scanf ("%f", &xb);
+							resufx = (xb*log(xb)) - (xb-xa) - (xa*log(xa));
+							printf("\n\n\t\t i (%.2f,%.2f) = %.6f",xa,xb, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu4submenu1;
