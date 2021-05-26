@@ -9,16 +9,16 @@ int main (void)
 {
 
 
-	keybd_event ( VK_MENU, 0x38, 0, 0 );
+	/*keybd_event ( VK_MENU, 0x38, 0, 0 );
 	keybd_event ( VK_SPACE, 0x39, 0, 0 );
 	keybd_event(0x58,0,0,0);
 	keybd_event ( VK_MENU, 0x38, KEYEVENTF_KEYUP, 0 );
 	keybd_event ( VK_SPACE, 0x39, KEYEVENTF_KEYUP, 0 );
-	keybd_event(0x58,0,KEYEVENTF_KEYUP,0);
+	keybd_event(0x58,0,KEYEVENTF_KEYUP,0);*/
 	// o c?digo em cima faz com que pressione a tecla ALT + SPACE + X = Tela cheia
 
 
-	system("MODE con cols=100 lines=50");// Seta o tamanho da janela
+	system("MODE con cols=100 lines=32");// Seta o tamanho da janela
 
 
 	int menu;
@@ -945,7 +945,7 @@ int main (void)
 							scanf ("%f", &k);
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
-							resufx = pow(k,x);
+							resufx = pow(x,k);
 							printf("\n\n\t\t f(%.2f) = %.2lf", k, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
@@ -955,6 +955,7 @@ int main (void)
 						
 						
 						case 2:
+							
 							
 							system ("cls");
 							printf ("\n\n\n\n");
@@ -1026,7 +1027,7 @@ int main (void)
 							scanf ("%f", &k);
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
-							resufx = pow(x,k);
+							resufx = pow(k,x);
 							printf("\n\n\t\t f(%.2f) = %.2lf", x, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
@@ -1036,6 +1037,7 @@ int main (void)
 						
 						case 2:
 						
+							case2:
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tPara a funcao desejada e necessario entrar com o valor de K: ");
@@ -1046,6 +1048,12 @@ int main (void)
 							if (kaux < 0) 
 							{
 								kaux = kaux * (-1);
+							}
+							if (kaux == 0)
+							{
+								
+								goto case2;
+								
 							}
 							resufx = pow(k,x) * (log(kaux));
 							printf("\n\n\t\t f(%.2f) = %.6lf", x, resufx);
@@ -1058,10 +1066,15 @@ int main (void)
 							
 						case 3:
 							
+							linha1069:
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tPara a funcao desejada e necessario entrar com o valor de K: ");
 							scanf ("%f", &k);
+							if (k<=0)
+							{
+								goto linha1069;
+							}
 							printf ("\tEntre agora com o valor de a: ");
 							scanf ("%f", &xa);
 							printf ("\tEntre agora com o valor de b: ");
@@ -1105,10 +1118,15 @@ int main (void)
 					{
 						case 1:
 						
+							linha1121:
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
+							if (x<=0)
+							{
+								goto linha1121;
+							}
 							resufx = log (x);
 							printf("\n\n\t\t f(%.2f) = %.6lf", x, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
@@ -1119,10 +1137,15 @@ int main (void)
 						
 						case 2:
 							
+							linha1140:
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
+							if (x == 0)
+							{
+								goto linha1140;
+							}
 							resufx = 1/x;
 							printf("\n\n\t\t f(%.2f) = %.6lf", x, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
@@ -1135,12 +1158,17 @@ int main (void)
 							
 						case 3:
 							
+							linha1161:
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tEntre agora com o valor de a: ");
 							scanf ("%f", &xa);
 							printf ("\tEntre agora com o valor de b: ");
 							scanf ("%f", &xb);
+							if ((xa >= 0 && xb <= 0 ) || (xa <= 0 && xb >= 0)) 
+							{
+								goto linha1161;
+							}
 							resufx = (xb*log(xb)) - (xb-xa) - (xa*log(xa));
 							printf("\n\n\t\t i (%.2f,%.2f) = %.6f",xa,xb, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
@@ -1185,7 +1213,7 @@ int main (void)
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
 							resufx = 1/x;
-							printf("\n\n\t\t f(%.6f)", resufx);
+							printf("\n\n\t\t f(%.1f) = (%.6f)",x , resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu5submenu1;
@@ -1194,12 +1222,17 @@ int main (void)
 						
 						case 2:
 							
+							linha1125:
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
-							resufx = 1/x;
-							printf("\n\n\t\t f(%.6f)", resufx);
+							if (x==0)
+							{
+								goto linha1125; 
+							}
+							resufx = -1/(pow(x,2));
+							printf("\n\n\t\t f(%.2f) = (%.6f)", x,resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu5submenu1;
@@ -1214,12 +1247,17 @@ int main (void)
 									
 						case 3:
 							
+							linha1250:
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tEntre agora com o valor de a: ");
 							scanf ("%f", &xa);
 							printf ("\tEntre agora com o valor de b: ");
 							scanf ("%f", &xb);
+							if ((xa >= 0 && xb <= 0 ) || (xa <= 0 && xb >= 0))
+							{
+								goto linha1250; 
+							}
 							resufx = log(abs(xb)) - log(abs(xa));
 							printf("\n\n\t\t i (%.2f,%.2f) = %.6f",xa,xb, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
@@ -1268,8 +1306,9 @@ int main (void)
 							printf ("\n\n\n\n");
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
-							resufx = sin (x);
-							printf("\n\n\t\t f(%.6f)", resufx);
+							resufx = sin(x * M_PI / 180);
+							//resufx = sin ();
+							printf("\n\n\t\t f(%.2f) = (%.6f)", x, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu6submenu1;
@@ -1283,7 +1322,7 @@ int main (void)
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
 							resufx = cos (x);
-							printf("\n\n\t\t f(%.6f)", resufx);
+							printf("\n\n\t\t f(%.2f) = (%.6f)", x, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu6submenu1;
@@ -1353,8 +1392,8 @@ int main (void)
 							printf ("\n\n\n\n");
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
-							resufx = cos (x);
-							printf("\n\n\t\t f(%.6f)", resufx);
+							resufx = cos (x * M_PI / 180);
+							printf("\n\n\t\t f(%.2f) = (%.6f)", x, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu7submenu1;
@@ -1368,7 +1407,7 @@ int main (void)
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
 							resufx = - sin(x);
-							printf("\n\n\t\t f(%.6f)", resufx);
+							printf("\n\n\t\t f(%.2f) = (%.6f)", x, resufx);;
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu7submenu1;
@@ -1383,7 +1422,7 @@ int main (void)
 							scanf ("%f", &xa);
 							printf ("\tEntre agora com o valor de b: ");
 							scanf ("%f", &xb);
-							resufx = sin(xb) - sin(xa);
+							resufx = sin(xb) - sin(xa) ;
 							printf("\n\n\t\t i (%.2f,%.2f) = %.6f",xa,xb, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
@@ -1428,12 +1467,17 @@ int main (void)
 					{
 						case 1:
 						
+							linha1470:
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
-							resufx = tan (x);
-							printf("\n\n\t\t f(%.6f)", resufx);
+							resufx = tan (x * M_PI / 180);
+							printf("\n\n\t\t f(%.2f) = (%.6f)", x, resufx);
+							if (fmod ((x+90),180) == 0)
+							{
+								goto linha1470;
+							}
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
 							goto menu8submenu1;
@@ -1442,25 +1486,46 @@ int main (void)
 						
 						case 2:	
 						
+							linha1489:
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tEntre agora com o valor de X: ");
 							scanf ("%f", &x);
 							resufx = (pow(1/cos(x),2));
-							printf("\n\n\t\t f(%.6f)", resufx);
+							if (resufx > 1000000)
+							{
+								goto linha1489;
+							}
+							printf("\n\n\t\t f(%.2f) = (%.6f)", x, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
-							goto menu8submenu1;					
+							goto menu8submenu1;
+												
+												
 						break;
 						
 						case 3:
+							
+							linha1509:
 							system ("cls");
 							printf ("\n\n\n\n");
 							printf ("\tEntre agora com o valor de a: ");
 							scanf ("%f", &xa);
 							printf ("\tEntre agora com o valor de b: ");
 							scanf ("%f", &xb);
-							resufx = log (-cos(xa)) - log(- cos(xb));
+							if (fabs(cos(xa)) < 0.0001 || fabs(cos(xb)) < 0.0001)
+							{
+								goto linha1509;
+							} 
+							
+							else if (fabs(xa-xb) > M_PI || ((cos(xa) < 0
+							&& cos(xb) > 0) || (cos(xa) > 0 && cos(xb) < 0)))
+							
+							{
+								goto linha1509;
+							}	
+							resufx = (-log(fabs(cos(xb)))) - (-log(fabs(cos(xa))));
+							//-log(|cos(x)|)	
 							printf("\n\n\t\t i (%.2f,%.2f) = %.6f",xa,xb, resufx);
 							printf ("\n\n\n\n\n\n\n\n\n");
 							system ("pause");
